@@ -1,0 +1,29 @@
+{
+  "name": "getdate",
+  "version": "1.0.0",
+  "description": "get data from zhongchou",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zzc950128/getData.git"
+  },
+  "keywords": [
+    "nodejs",
+    "js"
+  ],
+  "author": "zzc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zzc950128/getData/issues"
+  },
+  "homepage": "https://github.com/Zzc950128/getData#readme",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "superagent": "^3.8.3",
+    "superagent-charset": "^1.2.0",
+    "superagent-proxy": "^1.0.3"
+  }
+}
