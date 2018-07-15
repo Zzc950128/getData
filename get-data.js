@@ -15,6 +15,12 @@ function replaceText(text){
 	}
 }
 
+function replaceBlank(text){
+	if(text) {
+    	return text.replace(/\n/g, "").replace(/\t/g, "").replace(/\s/g, "");
+	}
+}
+
 function start(num, end) {
 	setTimeout(() => {
 		get(num, end)
@@ -114,10 +120,16 @@ function get(num, end, flag) {
 					obj.label = label.join()
 					obj.favorite = replaceText($('.heart-shaped').text().trim())
 					obj.goal = replaceText($('.xqRatioText .rightSpan b').text().trim())
-	renew: 项目更新
-	comment: 评论数目
-	video: 视频数目
-	photo: 图片数目
+					obj.renew = replaceText($('#xqTabNav_ul li').eq(1).find('b').text().trim())
+					obj.comment = replaceText($('#xqTabNav_ul li').eq(2).find('b').text().trim())
+					obj.video = $('.xqMainLeft_vedioA').length || 0
+					obj.photo = $('#xmxqBox img').length || 0
+					obj.text = replaceBlank($('#xmxqBox').text().trim()).length
+					let amount = []
+					// $(".label.siteIlB_item a").each((i, labelItem) => {
+					// 	label.push(replaceText($(labelItem).text().trim()))
+					// })
+					obj.amount = amount
 					data.push(obj)
 					console.log("get item " + hrefs[num].id + " over")
 					count++
