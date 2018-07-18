@@ -22,6 +22,7 @@ function replaceBlank(text){
 }
 
 function start(num, end) {
+	count = num
 	setTimeout(() => {
 		get(num, end)
 	}, 2000)
@@ -60,7 +61,7 @@ function get(num, end, flag) {
 						if(count == end) {
 							write(end)
 						}else {
-							start(count)
+							start(count, end)
 						}
 					}else {
 						setTimeout(() => {
@@ -87,14 +88,14 @@ function get(num, end, flag) {
 							let obj = {
 								id: hrefs[num].id,
 								name: hrefs[num].name,
-								website: urls[num].website
+								website: hrefs[num].website
 							}
 							dataError.push(obj)
 							count++
 							if(count == end) {
 								write(end)
 							}else {
-								start(count)
+								start(count, end)
 							}
 						}else {
 							setTimeout(() => {
@@ -124,11 +125,21 @@ function get(num, end, flag) {
 					obj.comment = replaceText($('#xqTabNav_ul li').eq(2).find('b').text().trim())
 					obj.video = $('.xqMainLeft_vedioA').length || 0
 					obj.photo = $('#xmxqBox img').length || 0
-					obj.text = replaceBlank($('#xmxqBox').text().trim()).length
-					let amount = []
-					// $(".label.siteIlB_item a").each((i, labelItem) => {
-					// 	label.push(replaceText($(labelItem).text().trim()))
-					// })
+					obj.text = replaceBlank($('#xmxqBox').text().trim()) ? replaceBlank($('#xmxqBox').text().trim()).length : 0
+					let amount = ""
+					if($(".zcje_h3").length > 0) {
+						$(".zcje_h3").each((i, amountItem) => {
+							let count = replaceText($(amountItem).find('b').text().trim())
+							let people = replaceText($(amountItem).html().trim())
+							if(people.indexOf('</em>') > -1) {
+								people = people.split('</em>')[1].trim().split('&#x9650;')[1].split('&#x4EBA;')[0].replace(/[^0-9]/ig,"")
+							}else {
+								people = people.split('</b>')[1].trim().split(" ")[0].replace(/[^0-9]/ig,"")
+							}
+							amount = amount + count + ":" + people + ","
+						})
+						amount = amount.slice(0,-1)
+					}
 					obj.amount = amount
 					data.push(obj)
 					console.log("get item " + hrefs[num].id + " over")
@@ -136,7 +147,7 @@ function get(num, end, flag) {
 					if(count == end) {
 						write(end)
 					}else {
-						start(count)
+						start(count, end)
 					}
 				}
 			}
@@ -170,4 +181,4 @@ function write(end) {
 	)
 }
 
-start(0, 5)
+start(7000, 7004)

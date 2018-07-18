@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 7001,
+      "name": "居里夫人帮农民把山楂做成山楂糕点送进城",
+      "website": "http://www.zhongchou.cn/deal-show/id-728448",
+      "money": "￥10555",
+      "support": "51",
+      "percent": "106%",
+      "type": "农业",
+      "district": "江苏",
+      "label": "农产品,扶贫,创业",
+      "favorite": "2",
+      "goal": "¥10,000",
+      "renew": "0",
+      "comment": "0",
+      "video": 0,
+      "photo": 14,
+      "text": 4901,
+      "amount": "¥1:22,¥22:1,¥42:5,¥115:6,¥275:6,¥795:10"
+    },
+    {
+      "id": 7003,
+      "name": "“行益西南”留守儿童体育器材捐赠",
+      "website": "http://www.zhongchou.cn/deal-show/id-745249",
+      "money": "￥4302",
+      "support": "114",
+      "percent": "56%",
+      "type": "公益",
+      "district": "四川",
+      "label": "留守儿童,公益,支教",
+      "favorite": "1",
+      "goal": "¥7,732",
+      "renew": "1",
+      "comment": "15",
+      "video": 0,
+      "photo": 6,
+      "text": 514,
+      "amount": "¥50:11,¥200:8,¥500:0"
+    },
+    {
+      "id": 7004,
+      "name": "六鳌红蜜薯--来自海边沙地的健康粗粮",
+      "website": "http://www.zhongchou.cn/deal-show/id-744034",
+      "money": "￥5452",
+      "support": "149",
+      "percent": "62%",
+      "type": "农业",
+      "district": "福建",
+      "label": "六鳌红蜜薯,六鳌地瓜,粗粮",
+      "favorite": "0",
+      "goal": "¥8,888",
+      "renew": "0",
+      "comment": "38",
+      "video": 0,
+      "photo": 17,
+      "text": 2349,
+      "amount": "¥1:15,¥29:46,¥36:96,¥140:1,¥168:11,¥536:0,¥598:0"
+    }
+  ]
+}
